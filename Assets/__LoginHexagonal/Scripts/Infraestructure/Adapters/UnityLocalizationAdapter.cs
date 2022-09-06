@@ -1,23 +1,29 @@
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
+using System.Threading.Tasks;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 
 namespace LoginHexagonal
 {
-	public class LocalizationManager : MonoBehaviour
+	public class UnityLocalizationAdapter : ILocalizationPort
 	{
-		[SerializeField] private List<StringTable> localeStringTablesList;
+		private List<StringTable> localeStringTablesList;
 
-		private List<StringTable> LocaleStringTablesList => localeStringTablesList;
+		private UnityLocalizationAdapter() { }
 
-		private IEnumerator Start()
+		public static async Task<UnityLocalizationAdapter> CreateUnityLocalizationAdapterAsync()
 		{
-			yield return LocalizationSettings.InitializationOperation;
+			UnityLocalizationAdapter instance = new UnityLocalizationAdapter();
+			await instance.InitializeAsync();
+			return instance;
+		}
+
+		private async Task InitializeAsync()
+		{
+			await LocalizationSettings.InitializationOperation.Task;
 			LocalizationSettings.SelectedLocaleChanged += SelectedLocaleChanged;
 
 			//GetAllLocaleTables
@@ -26,26 +32,24 @@ namespace LoginHexagonal
 				throw new NullReferenceException();
 
 			var getAllTablesOperation = LocalizationSettings.StringDatabase.GetAllTables(locale);
-			yield return getAllTablesOperation;
+			await getAllTablesOperation.Task;
 			this.localeStringTablesList = getAllTablesOperation.Result.ToList();
-
-			GetString();
 		}
 
-		private void OnDestroy()
+		~UnityLocalizationAdapter()
 		{
 			LocalizationSettings.SelectedLocaleChanged -= SelectedLocaleChanged;
 		}
 
-		private void SelectedLocaleChanged(Locale locale)
+		private async void SelectedLocaleChanged(Locale locale)
 		{
-			StartCoroutine(GetAllLocaleTables(locale));
+			await GetAllLocaleTables(locale);
 		}
 
-		private IEnumerator GetAllLocaleTables(Locale locale)
+		private async Task GetAllLocaleTables(Locale locale)
 		{
 			var getAllTablesOperation = LocalizationSettings.StringDatabase.GetAllTables(locale);
-			yield return getAllTablesOperation;
+			await getAllTablesOperation.Task;
 			this.localeStringTablesList = getAllTablesOperation.Result.ToList();
 		}
 
@@ -53,16 +57,16 @@ namespace LoginHexagonal
 		{
 			// Get the table entry. The entry contains the localized string and Metadata
 			var entry = table.GetEntry(entryName);
-			
+
 			if (entry == null)
 				throw new KeyNotFoundException();
 
 			return entry.GetLocalizedString(); // We can pass in optional arguments for Smart Format or String.Format here.
 		}
 
-		private string GetLocalizedString(string entryName)
+		public string GetLocalizedString(string entryName)
 		{
-			foreach (StringTable stringTable in LocaleStringTablesList)
+			foreach (StringTable stringTable in localeStringTablesList)
 			{
 				StringTableEntry entry = stringTable.GetEntry(entryName);
 				if (entry != null)
@@ -73,12 +77,6 @@ namespace LoginHexagonal
 
 			throw new KeyNotFoundException();
 		}
-
-		public void GetString()
-		{
-			Debug.Log(GetLocalizedString(localeStringTablesList[0], "Login"));
-			Debug.Log(GetLocalizedString("Login2"));
-		}
-
 	}
+
 }

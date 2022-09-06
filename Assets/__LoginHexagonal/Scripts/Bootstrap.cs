@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace LoginHexagonal
@@ -6,24 +7,27 @@ namespace LoginHexagonal
 	{
 		[SerializeField] private ViewsManager viewsManager = null;
 
+		private ILocalizationPort localizationPort;
 		private IAuthPort authPort;
 
-		private void Start()
+		private async void Start()
 		{
-			InitializeAdapters();
+			await InitializeAdaptersAsync();
 			InitializeBOs();
 			InitializeViewManager();
 
 			viewsManager.ShowMainPage();
 		}
 
-		private void InitializeAdapters()
+		private async Task InitializeAdaptersAsync()
 		{
+			localizationPort = await UnityLocalizationAdapter.CreateUnityLocalizationAdapterAsync();
 			authPort = new GenericAuthAdapter();
 		}
 
 		private void InitializeBOs()
 		{
+			BusinessObjectLocator.AddBO(new LocalizationBO(localizationPort));
 			BusinessObjectLocator.AddBO(new LoginBO(authPort));
 			BusinessObjectLocator.AddBO(new RegisterBO(authPort));
 		}
