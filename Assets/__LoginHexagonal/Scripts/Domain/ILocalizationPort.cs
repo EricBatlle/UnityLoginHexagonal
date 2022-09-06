@@ -2,6 +2,6 @@
 {
 	public interface ILocalizationPort
 	{
-		string GetLocalizedString(string entryName);
+		string GetLocalizedString(string tableName, string entryName);
 	}
 }

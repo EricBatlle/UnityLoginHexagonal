@@ -9,9 +9,9 @@
 			this.localizationPort = localizationPort;
 		}
 
-		public string GetLocalizedString(string stringKey)
+		public string GetLocalizedString(string tableName, string stringKey)
 		{
-			return localizationPort.GetLocalizedString(stringKey);
+			return localizationPort.GetLocalizedString(tableName, stringKey);
 		}
 	}
 

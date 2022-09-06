@@ -10,7 +10,7 @@ namespace LoginHexagonal
 {
 	public class UnityLocalizationAdapter : ILocalizationPort
 	{
-		private List<StringTable> localeStringTablesList;
+		private Dictionary<string, StringTable> localeStringTablesDict = new Dictionary<string, StringTable>();
 
 		private UnityLocalizationAdapter() { }
 
@@ -31,9 +31,7 @@ namespace LoginHexagonal
 			if (locale == null)
 				throw new NullReferenceException();
 
-			var getAllTablesOperation = LocalizationSettings.StringDatabase.GetAllTables(locale);
-			await getAllTablesOperation.Task;
-			this.localeStringTablesList = getAllTablesOperation.Result.ToList();
+			await GetAllLocaleTables(locale);
 		}
 
 		~UnityLocalizationAdapter()
@@ -48,9 +46,11 @@ namespace LoginHexagonal
 
 		private async Task GetAllLocaleTables(Locale locale)
 		{
+			localeStringTablesDict.Clear();
+
 			var getAllTablesOperation = LocalizationSettings.StringDatabase.GetAllTables(locale);
 			await getAllTablesOperation.Task;
-			this.localeStringTablesList = getAllTablesOperation.Result.ToList();
+			getAllTablesOperation.Result.ToList().ForEach(stringTable => localeStringTablesDict.Add(stringTable.TableCollectionName, stringTable));
 		}
 
 		private static string GetLocalizedString(StringTable table, string entryName)
@@ -63,20 +63,19 @@ namespace LoginHexagonal
 
 			return entry.GetLocalizedString(); // We can pass in optional arguments for Smart Format or String.Format here.
 		}
-
-		public string GetLocalizedString(string entryName)
+		
+		public string GetLocalizedString(string tableName, string entryName)
 		{
-			foreach (StringTable stringTable in localeStringTablesList)
+			if(localeStringTablesDict.TryGetValue(tableName, out StringTable stringTable))
 			{
-				StringTableEntry entry = stringTable.GetEntry(entryName);
-				if (entry != null)
-				{
-					return entry.GetLocalizedString();
-				}
+				return GetLocalizedString(stringTable, entryName);
 			}
-
-			throw new KeyNotFoundException();
+			else
+			{
+				throw new KeyNotFoundException();
+			}
 		}
+		
 	}
 
 }
