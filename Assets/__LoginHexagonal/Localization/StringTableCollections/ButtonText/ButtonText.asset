@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: AuthenticationTexts
+  m_Name: ButtonText
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: 82781b5f036305f44835b65934eb6655, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: 5435c0f388ff3fe46a0f47af0efca224, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 29da6b406a89f7b44a95f0081dc94717, type: 2}
-  - {fileID: 11400000, guid: 7706459d60d165b458c2c39cd8c0e3ff, type: 2}
+  - {fileID: 11400000, guid: 828f6734a5645704e8ca093622acbba0, type: 2}
+  - {fileID: 11400000, guid: 76ace92affb58584bb72a66616393c37, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:
