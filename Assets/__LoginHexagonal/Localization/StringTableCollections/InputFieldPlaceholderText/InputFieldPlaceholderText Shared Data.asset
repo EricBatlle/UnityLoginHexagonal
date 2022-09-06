@@ -10,27 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: AuthenticationText Shared Data
+  m_Name: InputFieldPlaceholderText Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: AuthenticationText
-  m_TableCollectionNameGuidString: 31ac65cb9aa9ee54bba0a858a27e65a4
+  m_TableCollectionName: InputFieldPlaceholderText
+  m_TableCollectionNameGuidString: 8b151661c87b74440bbf990797107331
   m_Entries:
-  - m_Id: 6752899072
-    m_Key: Username
-    m_Metadata:
-      m_Items: []
-  - m_Id: 47123075072
-    m_Key: Password
+  - m_Id: 5456859136
+    m_Key: Enter text...
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 9102810739722944516
+    rid: 9102810739722944517
   references:
     version: 2
     RefIds:
-    - rid: 9102810739722944516
+    - rid: 9102810739722944517
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1662494169342
+        m_CustomEpoch: 1662494326139

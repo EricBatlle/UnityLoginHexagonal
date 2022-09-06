@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 229042217341896355}
   - component: {fileID: 2992725817362741834}
   - component: {fileID: 998166336964121911}
+  - component: {fileID: 2141639559153071260}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -920,6 +921,46 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2141639559153071260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214399464024648280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:5435c0f388ff3fe46a0f47af0efca224
+    m_TableEntryReference:
+      m_KeyId: 259375828992
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 998166336964121911}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &246017849594260771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,11 +1175,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014dd07851048a244b9364404afde54b, type: 3}
+--- !u!1 &8174573769768904300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8594164269194029035, guid: 014dd07851048a244b9364404afde54b, type: 3}
+  m_PrefabInstance: {fileID: 447388352709591431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &361163061231817270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174573769768904300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:31ac65cb9aa9ee54bba0a858a27e65a4
+    m_TableEntryReference:
+      m_KeyId: 2936323248128
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8713588580407189642}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!224 &8269519261763137765 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8428005814249419106, guid: 014dd07851048a244b9364404afde54b, type: 3}
   m_PrefabInstance: {fileID: 447388352709591431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8713588580407189642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9140499593462882573, guid: 014dd07851048a244b9364404afde54b, type: 3}
+  m_PrefabInstance: {fileID: 447388352709591431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174573769768904300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2234903164890580142
 PrefabInstance:
   m_ObjectHideFlags: 0

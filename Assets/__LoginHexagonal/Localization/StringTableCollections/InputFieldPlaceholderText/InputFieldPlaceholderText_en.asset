@@ -10,28 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: ButtonText_es
+  m_Name: InputFieldPlaceholderText_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
-  m_SharedData: {fileID: 11400000, guid: 5435c0f388ff3fe46a0f47af0efca224, type: 2}
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8b151661c87b74440bbf990797107331, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 11475685376
-    m_Localized: "Bot\xF3n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 84657901568
-    m_Localized: Ok
-    m_Metadata:
-      m_Items: []
-  - m_Id: 177268133888
-    m_Localized: Registrarse
-    m_Metadata:
-      m_Items: []
-  - m_Id: 259375828992
-    m_Localized: Logearse
+  - m_Id: 5456859136
+    m_Localized: Enter text...
     m_Metadata:
       m_Items: []
   references:

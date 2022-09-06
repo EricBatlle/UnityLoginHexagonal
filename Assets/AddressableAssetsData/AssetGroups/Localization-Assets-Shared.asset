@@ -17,8 +17,23 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1e17e39b87e6fc94b85b719153417313
   m_SerializeEntries:
-  - m_GUID: 82781b5f036305f44835b65934eb6655
-    m_Address: Assets/__LoginHexagonal/Localization/StringTableCollections/AuthenticationTexts/AuthenticationTexts
+  - m_GUID: 31ac65cb9aa9ee54bba0a858a27e65a4
+    m_Address: Assets/__LoginHexagonal/Localization/StringTableCollections/AuthenticationText/AuthenticationText
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 58d0e8af86461994dafced305e326f9c
+    m_Address: Assets/__LoginHexagonal/Localization/StringTableCollections/ErrorMessage/ErrorMessage
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 5435c0f388ff3fe46a0f47af0efca224
+    m_Address: Assets/__LoginHexagonal/Localization/StringTableCollections/ButtonText/ButtonText
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8b151661c87b74440bbf990797107331
+    m_Address: Assets/__LoginHexagonal/Localization/StringTableCollections/InputFieldPlaceholderText/InputFieldPlaceholderText
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []

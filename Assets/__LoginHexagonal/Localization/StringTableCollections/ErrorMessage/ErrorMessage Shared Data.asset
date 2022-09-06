@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: ErrorMessage Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: ErrorMessage
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 58d0e8af86461994dafced305e326f9c
+  m_Entries:
+  - m_Id: 44799430656
+    m_Key: ShortPassword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 244850954240
+    m_Key: ImpossibleToLogin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

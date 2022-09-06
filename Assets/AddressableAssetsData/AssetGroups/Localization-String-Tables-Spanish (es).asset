@@ -17,8 +17,26 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 7d055ddb29ac6ba49823015529fc5e31
   m_SerializeEntries:
-  - m_GUID: 7706459d60d165b458c2c39cd8c0e3ff
-    m_Address: AuthenticationTexts_es
+  - m_GUID: 13e0ba072f8968745ba32c87c0d12279
+    m_Address: AuthenticationText_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 8c6dbf1b595c5e84f9cf9ada824601aa
+    m_Address: ErrorMessage_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 76ace92affb58584bb72a66616393c37
+    m_Address: ButtonText_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+  - m_GUID: 2245226db0eebef46bf5363449c0594f
+    m_Address: InputFieldPlaceholderText_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

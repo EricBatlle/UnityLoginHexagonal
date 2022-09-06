@@ -13,8 +13,24 @@ MonoBehaviour:
   m_Name: ButtonText Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: ButtonText
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 5435c0f388ff3fe46a0f47af0efca224
+  m_Entries:
+  - m_Id: 11475685376
+    m_Key: Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84657901568
+    m_Key: Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 177268133888
+    m_Key: Register
+    m_Metadata:
+      m_Items: []
+  - m_Id: 259375828992
+    m_Key: Login
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

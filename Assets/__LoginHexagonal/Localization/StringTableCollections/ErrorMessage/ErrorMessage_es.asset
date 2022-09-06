@@ -17,7 +17,15 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 58d0e8af86461994dafced305e326f9c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 44799430656
+    m_Localized: "La contrase\xF1a debe tener almenos 6 car\xE1cteres o m\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 244850954240
+    m_Localized: Imposible logearse
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
