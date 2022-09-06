@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: Password
     m_Metadata:
       m_Items: []
+  - m_Id: 2936323248128
+    m_Key: Register
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

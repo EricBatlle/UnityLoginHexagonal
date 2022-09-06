@@ -20,6 +20,7 @@ namespace LoginHexagonal
 
 			registerView.Initialize();
 			registerView.OnGoToLogin += GoToLoginFromRegister;
+			registerView.OnRegisterCompleted += GoToLoginFromRegister;
 			initializedViews.Add(registerView);
 		}
 
@@ -27,6 +28,7 @@ namespace LoginHexagonal
 		{
 			loginView.OnGoToRegister -= GoToRegisterFromLogin;
 			registerView.OnGoToLogin -= GoToLoginFromRegister;
+			registerView.OnRegisterCompleted -= GoToLoginFromRegister;
 		}
 
 		public void SwapViews(IViewManager fromViewManager, IViewManager toViewManager)

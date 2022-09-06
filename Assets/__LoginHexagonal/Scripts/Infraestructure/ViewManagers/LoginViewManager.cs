@@ -62,11 +62,11 @@ namespace LoginHexagonal
 			}
 			catch (FormatException)
 			{
-				DisplayErrorMessage(localizationBO.GetLocalizedString("AuthenticationTexts", "ErrorMessage_ShortPassword"));
+				DisplayErrorMessage(localizationBO.GetLocalizedErrorMessage("ShortPassword"));
 			}
 			catch (LoginException)
 			{
-				DisplayErrorMessage(localizationBO.GetLocalizedString("AuthenticationTexts", "ErrorMessage_ImpossibleToLogin"));
+				DisplayErrorMessage(localizationBO.GetLocalizedErrorMessage("ImpossibleToLogin"));
 			}
 		}
 

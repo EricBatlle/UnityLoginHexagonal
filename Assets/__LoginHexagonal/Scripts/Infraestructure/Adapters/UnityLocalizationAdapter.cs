@@ -63,10 +63,10 @@ namespace LoginHexagonal
 
 			return entry.GetLocalizedString(); // We can pass in optional arguments for Smart Format or String.Format here.
 		}
-		
+
 		public string GetLocalizedString(string tableName, string entryName)
 		{
-			if(localeStringTablesDict.TryGetValue(tableName, out StringTable stringTable))
+			if (localeStringTablesDict.TryGetValue(tableName, out StringTable stringTable))
 			{
 				return GetLocalizedString(stringTable, entryName);
 			}
@@ -75,7 +75,7 @@ namespace LoginHexagonal
 				throw new KeyNotFoundException();
 			}
 		}
-		
+
 	}
 
 }

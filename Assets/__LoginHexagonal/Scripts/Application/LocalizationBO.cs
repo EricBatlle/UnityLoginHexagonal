@@ -13,6 +13,11 @@
 		{
 			return localizationPort.GetLocalizedString(tableName, stringKey);
 		}
+
+		public string GetLocalizedErrorMessage(string stringKey)
+		{
+			return localizationPort.GetLocalizedString("ErrorMessage", stringKey);
+		}
 	}
 
 }

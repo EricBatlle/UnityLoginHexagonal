@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: "Contrase\xF1a"
     m_Metadata:
       m_Items: []
+  - m_Id: 2936323248128
+    m_Localized: Registro
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

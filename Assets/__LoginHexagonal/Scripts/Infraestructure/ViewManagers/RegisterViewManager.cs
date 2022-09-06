@@ -16,6 +16,7 @@ namespace LoginHexagonal
 		[SerializeField] private Button goToLoginButton = null;
 
 		private RegisterBO registerBO;
+		private LocalizationBO localizationBO;
 
 		private string Username
 		{
@@ -28,7 +29,7 @@ namespace LoginHexagonal
 			set => passwordInputField.text = value;
 		}
 
-		public event Action OnLoginCompleted = null;
+		public event Action OnRegisterCompleted = null;
 		public event Action OnGoToLogin = null;
 
 		public void Initialize()
@@ -37,6 +38,7 @@ namespace LoginHexagonal
 			goToLoginButton.onClick.AddListener(OnGoToLoginButton);
 
 			registerBO = BusinessObjectLocator.GetBO<RegisterBO>();
+			localizationBO = BusinessObjectLocator.GetBO<LocalizationBO>();
 		}
 
 		public void ShowView()
@@ -56,15 +58,15 @@ namespace LoginHexagonal
 			{
 				registerBO.Register(Username, Password);
 				HideErrorMessage();
-				OnLoginCompleted?.Invoke();
+				OnRegisterCompleted?.Invoke();
 			}
 			catch (FormatException)
 			{
-				DisplayErrorMessage("Password must have more than 6 characters");
+				DisplayErrorMessage(localizationBO.GetLocalizedErrorMessage("ShortPassword"));
 			}
 			catch (RegisterException)
 			{
-				DisplayErrorMessage("Impossible to Register");
+				DisplayErrorMessage(localizationBO.GetLocalizedErrorMessage("ImpossibleToLogin"));
 			}
 		}
 
